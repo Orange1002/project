@@ -1,0 +1,38 @@
+footer {
+    /* margin-top: 150px; */
+    background-color: #505050;
+    height: 400px;
+
+    ul {
+        color: #D9D9D9;
+        font-size: 14px;
+
+        a {
+            color: #D9D9D9;
+        }
+    }
+
+    h5 {
+        font-size: 14px;
+        color: #D9D9D9;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    #footer-desktop {
+        display: none;
+    }
+
+    #footer-mobile {
+        display: block;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+        margin-top: 150px;
+    }
+}

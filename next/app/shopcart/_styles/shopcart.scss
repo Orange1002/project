@@ -1,0 +1,10 @@
+// 變數覆蓋用 (Variable overrides)
+
+// ↑↑↑  變數覆蓋(Variable overrides) 要寫在這行"上面"  ↑↑↑
+// 導入所有 bootstrap 樣式
+@import '~bootstrap/scss/bootstrap';
+
+// ↓↓↓  其它客製樣式要寫在這行的"下面" ↓↓↓
+.fs-36 {
+  font-size: 36px;
+}

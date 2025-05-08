@@ -1,0 +1,13 @@
+@use '../../node_modules/bootstrap-icons/font/bootstrap-icons' as *;
+// 引入 Font Awesome SCSS 版本
+// @use '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome' as fa;
+// @use '../../node_modules/@fortawesome/fontawesome-free/scss/solid' as fa-solid;
+// @use '../../node_modules/@fortawesome/fontawesome-free/scss/brands' as fa-brands;
+// @use '../../node_modules/@fortawesome/fontawesome-free/scss/svg-with-js' as fa-svg;
+@use './nav' as nav;
+@use './base' as base;
+@use './footer' as footer;
+@import 'https://fonts.googleapis.com/css2?family=ABeeZee&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=ABeeZee&family=Inria+Sans&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap';
+
