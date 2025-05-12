@@ -27,7 +27,7 @@ export default function MyNavbar() {
           id="navbarMain"
           className="justify-content-end d-none d-lg-flex gap-4 align-items-center"
         >
-          <Nav className="gap-3 text-uppercase">
+          <Nav className="gap-27 text-uppercase">
             <Nav.Link href="#">首頁</Nav.Link>
             <Nav.Link href="#">最新消息</Nav.Link>
             <Nav.Link href="#">商品</Nav.Link>
@@ -51,13 +51,17 @@ export default function MyNavbar() {
               type="submit"
               onClick={(e) => setTimeout(() => e.currentTarget.blur(), 100)}
             >
-              <BiSearch style={{ color: '#ff7e79' }} />
+              <BiSearch style={{ color: '#cc543a' }} />
             </Button>
           </Form>
 
           <div className="d-flex align-items-center gap-4">
-            <a href="#" className="text-dark d-flex align-items-center"><i className="bi bi-person nav-icon" /></a>
-            <a href="#" className="text-dark d-flex align-items-center"><i className="bi bi-cart nav-icon" /></a>
+            <a href="#" className="text-dark d-flex align-items-center">
+              <i className="bi bi-person nav-icon" />
+            </a>
+            <a href="#" className="text-dark d-flex align-items-center">
+              <i className="bi bi-cart nav-icon" />
+            </a>
           </div>
         </Navbar.Collapse>
       </Container>

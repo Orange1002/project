@@ -14,6 +14,7 @@ export default function AppPage(props) {
     <>
       <h1>首頁</h1>
       <hr />
+      <div style={{ height: '800px' }}></div>
     </>
   )
 }
