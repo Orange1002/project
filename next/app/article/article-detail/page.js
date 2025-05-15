@@ -1,30 +1,30 @@
 import React from 'react'
 import './_style/detail.scss'
-import '@fortawesome/fontawesome-free/css/all.min.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { AiOutlineRight } from "react-icons/ai";
+
+// React Icons
+import {
+  FaAngleRight,
+  FaRegHeart,
+  FaInstagram,
+  FaYoutube,
+  FaLine,
+} from 'react-icons/fa'
+
 const ArticlePage = () => {
   return (
     <main>
       <div className="d-flex align-items-center fw-light ms-5 detail-bread">
-        <a href="#" className="mb-0 me-3 text-decoration-none">
-          首頁
-        </a>
-        <i className="fa-solid fa-angle-right fa-fw"></i>
-        <a href="#" className="mb-0 me-3 ms-3 text-decoration-none">
-          文章
-        </a>
-        <i className="fa-solid fa-angle-right fa-fw"></i>
-        <a href="#" className="mb-0 me-3 ms-3 text-decoration-none">
-          文章列表
-        </a>
-        <i className="fa-solid fa-angle-right fa-fw"></i>
-        <a href="#" className="mb-0 me-3 ms-3 text-decoration-none">
-          營養與飲食
-        </a>
-        <i className="fa-solid fa-angle-right fa-fw"></i>
-        <a href="#" className="mb-0 me-3 ms-3 text-decoration-none">
-          冬季維持狗狗活力的中獸醫食療配方
-        </a>
+        <a href="#" className="mb-0 me-3 text-decoration-none">首頁</a>
+        <AiOutlineRight  className="me-3" />
+        <a href="#" className="mb-0 me-3 text-decoration-none">文章</a>
+        <AiOutlineRight  className="me-3" />
+        <a href="#" className="mb-0 me-3 text-decoration-none">文章列表</a>
+        <AiOutlineRight  className="me-3" />
+        <a href="#" className="mb-0 me-3 text-decoration-none">營養與飲食</a>
+        <AiOutlineRight  className="me-3" />
+        <a href="#" className="mb-0 me-3 text-decoration-none">冬季維持狗狗活力的中獸醫食療配方</a>
       </div>
 
       <div className="container">
@@ -60,8 +60,7 @@ const ArticlePage = () => {
                     </small>
                   </p>
                   <p className="card-text">
-                    現任 興沛動物醫院
-                    主治獸醫師，擁有2486年寵物食療臨床經驗寵物鮮食品牌【年年】共同創辦人
+                    現任 興沛動物醫院 主治獸醫師，擁有2486年寵物食療臨床經驗，寵物鮮食品牌【年年】共同創辦人
                   </p>
                 </div>
               </div>
@@ -78,16 +77,16 @@ const ArticlePage = () => {
             <div className="col-12 d-flex justify-content-between align-items-center border-bottom pb-2">
               <p className="mt-3">2025/05/08 11:39</p>
               <div className="d-flex align-items-center py-1">
-                <i className="fa-regular fa-heart share-heart me-5"></i>
+                <FaRegHeart className="share-heart me-5" />
                 <p className="mb-1 me-2">分享--</p>
                 <a className="me-2" href="#">
-                  <i className="fa-brands fa-instagram"></i>
+                  <FaInstagram />
                 </a>
                 <a className="me-2" href="#">
-                  <i className="fa-brands fa-youtube"></i>
+                  <FaYoutube />
                 </a>
                 <a href="#">
-                  <i className="fa-brands fa-line"></i>
+                  <FaLine />
                 </a>
               </div>
             </div>
@@ -117,10 +116,7 @@ const ArticlePage = () => {
                         placeholder="回覆這則留言..."
                       />
                     </div>
-                    <button
-                      type="submit"
-                      className="btn btn-sm btn-primary replay-btn mt-1"
-                    >
+                    <button type="submit" className="btn btn-sm btn-primary replay-btn mt-1">
                       送出
                     </button>
                   </form>
@@ -140,10 +136,7 @@ const ArticlePage = () => {
                         placeholder="回覆這則留言..."
                       />
                     </div>
-                    <button
-                      type="submit"
-                      className="btn btn-sm btn-primary replay-btn mt-1"
-                    >
+                    <button type="submit" className="btn btn-sm btn-primary replay-btn mt-1">
                       送出
                     </button>
                   </form>
@@ -157,10 +150,7 @@ const ArticlePage = () => {
       {/* 留言底部輸入區 */}
       <div className="comment-footer">
         <form className="d-flex gap-2">
-          <textarea
-            className="form-control"
-            placeholder=" 留下您的想法 🐶 ..."
-          ></textarea>
+          <textarea className="form-control" placeholder=" 留下您的想法 🐶 ..."></textarea>
           <button type="submit" className="btn btn-primary replay-btn">
             送出
           </button>

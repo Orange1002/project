@@ -108,9 +108,38 @@
   background-color: #f3f3f3;
 }
 
-.card-icon {
+.icon {
   font-size: 16px;
-  color: #787878;
+  background-color: #7d7d7d;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  color: #ffffff;
+  outline: none; /* ✅ 取消聚焦框線 */
+  box-shadow: none; /* ✅ 取消有些瀏覽器的藍色邊框 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  padding: 0; /* ✅ 避免多餘內距影響大小 */
+}
+
+.icon:hover {
+  background-color: #cc543a;
+  transform: scale(1.05);
+}
+.icon-link {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  border: 'none';
+  padding: 0;
+  cursor: 'pointer';
+  outline: 'none';
+}
+
+.icon-link:hover .icon {
+  background-color: #cc543a;
 }
 
 .card-1 img {
@@ -131,14 +160,14 @@
   height: 25px;
   text-decoration: none;
 
-  i {
+  .icon {
     font-size: 15px;
   }
   &:hover {
     background-color: #cc543a;
     color: white;
     transform: scale(1.1);
-    i {
+    .icon {
       // background-color: #cc543a;
       color: white;
     }
@@ -354,9 +383,8 @@
   @media (max-width: 576px) {
     width: 34px;
     padding-left: 10px;
-  }  
+  }
 }
-
 
 .event-title::after {
   content: '●';

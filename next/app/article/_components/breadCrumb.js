@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { AiOutlineRight } from "react-icons/ai";
+
 
 function Breadcrumb() {
   return (
@@ -14,7 +14,7 @@ function Breadcrumb() {
         </div>
         <div className="d-flex align-items-center fw-light gap-4 mt-4">
           <a href="#" className="mb-0 me-3 text-decoration-none bread">首頁</a>
-          <FontAwesomeIcon icon={faAngleRight} className="bread"/>
+          <AiOutlineRight className="bread"/>
           <a href="#" className="mb-0 me-3 ms-3 text-decoration-none bread">文章</a>
         </div>
       </div>

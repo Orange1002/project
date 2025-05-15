@@ -108,12 +108,39 @@
   background-color: #cc543a;
 }
 
-.card-2:hover i {
+.icon {
+  font-size: 16px;
+  background-color: #7d7d7d;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  color: #ffffff;
+  outline: none;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  padding: 0;
 }
-.card-i-hover:hover {
-  color: #cc543a;
+
+.icon:hover {
+  background-color: #cc543a;
+  transform: scale(1.05);
+}
+
+.icon-link {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  padding: 0;
   cursor: pointer;
-  transform: scale(1.25);
+  outline: none;
+}
+
+.icon-link:hover .icon {
+  background-color: #cc543a;
 }
 
 .big-card {
