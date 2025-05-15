@@ -125,6 +125,7 @@ body {
 }
 
 .search-btn {
+
   &:focus,
   &:active,
   &:focus-visible {
@@ -163,6 +164,7 @@ button:focus-visible {
   transition: color 0.2s ease;
 }
 
-a:hover .nav-icon {
+.nav-icon:hover {
   color: #fb966e;
+  cursor: pointer;
 }
