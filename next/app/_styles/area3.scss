@@ -13,11 +13,11 @@
 }
 
 // Wrapper 區塊
-.event-wrapper {
-  @media (max-width: 575.98px) {
-    padding: 20px 0;
-  }
-}
+// .event-wrapper {
+//   @media (max-width: 575.98px) {
+//     padding: 20px 0;
+//   }
+// }
 
 // 標題區塊
 .event-title {
@@ -83,6 +83,7 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
+    padding-inline: 0px;
   }
 }
 

@@ -1,8 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
+import Event from './_components/event.js'
+import MyProductCard from './_components/product-card.js'
 
 const slides = [
   { src: '/images/hero-dog-1.jpg', alt: 'Dog 1' },
@@ -10,6 +11,18 @@ const slides = [
   { src: '/images/hero-dog-3.jpg', alt: 'Dog 3' },
   { src: '/images/hero-dog-4.jpg', alt: 'Dog 4' },
   { src: '/images/hero-dog-5.jpg', alt: 'Dog 5' },
+]
+
+const categories = [
+  { src: 'images/icon-food.png', alt: 'Food', label: 'FOOD' },
+  { src: 'images/icon-can.png', alt: 'Can', label: 'CAN' },
+  { src: 'images/icon-snack.png', alt: 'Snack', label: 'SNACK' },
+  { src: 'images/icon-bed.png', alt: 'Bed', label: 'BED' },
+  { src: 'images/icon-bath.png', alt: 'Bath', label: 'BATH' },
+  { src: 'images/icon-toy.png', alt: 'Toy', label: 'TOY' },
+  { src: 'images/icon-cloth.png', alt: 'Cloth', label: 'CLOTH' },
+  { src: 'images/icon-collar.png', alt: 'Collar', label: 'COLLAR' },
+  { src: 'images/icon-accessory.png', alt: 'Accessory', label: 'ACCESSORY' },
 ]
 
 export default function AppPage() {
@@ -22,6 +35,18 @@ export default function AppPage() {
     }, 6000)
     return () => clearInterval(interval)
   }, [])
+
+  // 第二部分
+  const scrollRef = useRef(null)
+
+  const scroll = (offset) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: offset,
+        behavior: 'smooth',
+      })
+    }
+  }
 
   return (
     <>
@@ -40,7 +65,7 @@ export default function AppPage() {
                     transition: 'opacity 2.5s ease-in-out', // 使用 fade 動畫
                   }}
                 >
-                  <img
+                  <Image
                     src={slide.src}
                     alt={slide.alt}
                     className="w-100 h-100 object-fit-cover"
@@ -67,7 +92,7 @@ export default function AppPage() {
           <div className="hero-content-wrapper ps-5 d-none d-lg-block">
             <div className="hero-background-blur" />
             <div className="hero-content">
-              <img
+              <Image
                 src="images/hero-logo.png"
                 alt="BARK & BIJOU Logo"
                 className="hero-logo img-fluid"
@@ -81,6 +106,48 @@ export default function AppPage() {
           </div>
         </section>
       </section>
+
+      {/* 第二區塊 */}
+      <section className="category-nav bg-white border-top py-4">
+        <div className="container">
+          <div className="category-wrapper d-flex align-items-center position-relative">
+            {/* 左箭頭 */}
+            <button
+              className="category-arrow left-arrow"
+              aria-label="Scroll left"
+              onClick={() => scroll(-150)}
+            >
+              <i className="bi bi-chevron-left"></i>
+            </button>
+
+            {/* 可橫向滑動的分類 */}
+            <div
+              className="category-scroll d-flex align-items-center overflow-auto"
+              ref={scrollRef}
+            >
+              {categories.map((item, index) => (
+                <div className="category-item text-center" key={index}>
+                  <Image src={item.src} alt={item.alt} />
+                  <div className="text-uppercase small mt-2">{item.label}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* 右箭頭 */}
+            <button
+              className="category-arrow right-arrow"
+              aria-label="Scroll right"
+              onClick={() => scroll(150)}
+            >
+              <i className="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* 第三區塊 */}
+      <Event />
+
       {/* 第四區塊 */}
       <section>
         <Container>
@@ -180,6 +247,10 @@ export default function AppPage() {
           </Row>
         </Container>
       </section>
+
+      {/* 第五區塊 */}
+      <MyProductCard />
+
       {/* 第八區塊 */}
       <section>
         <Container>
@@ -216,17 +287,17 @@ export default function AppPage() {
                   </div>
                   <div className="text-end box2-3 d-none d-lg-block">
                     <div className="box2-4 position-relative">
-                      <img
+                      <Image
                         src="/images/Dog Sit.png"
                         alt=""
                         className="position-absolute"
                       />
-                      <img
+                      <Image
                         src="/images/Traveler.png"
                         alt=""
                         className="position-absolute"
                       />
-                      <img
+                      <Image
                         src="/images/Shop.png"
                         alt=""
                         className="position-absolute"
@@ -251,10 +322,10 @@ export default function AppPage() {
                   </div>
                   <div className="d-none d-lg-flex box2-7 position-relative">
                     <div className="box2-6 position-relative">
-                      <img src="/images/Truck.png" alt="" />
+                      <Image src="/images/Truck.png" alt="" />
                     </div>
                     <div className="box2-8">
-                      <img
+                      <Image
                         src="/images/Handle With Care.png"
                         alt=""
                         className="position-absolute"
