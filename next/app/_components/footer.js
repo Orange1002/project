@@ -24,7 +24,7 @@ export default function MyFooter() {
               <Row>
                 <Col className="ms-4">
                   <ListGroup variant="flush">
-                    <ListGroup.Item className="fw-bold">
+                    <ListGroup.Item className="fw-bold mb-4">
                       Online Store
                     </ListGroup.Item>
                     <ListGroup.Item>
@@ -49,9 +49,9 @@ export default function MyFooter() {
                     </ListGroup.Item>
                   </ListGroup>
                 </Col>
-                <Col className="mt-4 me-3">
+                <Col className="me-3">
                   <ListGroup variant="flush">
-                    <ListGroup.Item>
+                    <ListGroup.Item className="mb-4">
                       <a className="text-decoration-none" href="">
                         常見問題
                       </a>
@@ -73,9 +73,9 @@ export default function MyFooter() {
                     </ListGroup.Item>
                   </ListGroup>
                 </Col>
-                <Col className="mt-4">
+                <Col className="">
                   <ListGroup variant="flush">
-                    <ListGroup.Item>
+                    <ListGroup.Item className="mb-4">
                       <a className="text-decoration-none" href="">
                         尺寸
                       </a>
@@ -99,7 +99,9 @@ export default function MyFooter() {
                 </Col>
                 <Col className="d-flex justify-content-center">
                   <ListGroup variant="flush">
-                    <ListGroup.Item className="fw-bold">Brand</ListGroup.Item>
+                    <ListGroup.Item className="fw-bold mb-4">
+                      Brand
+                    </ListGroup.Item>
                     <ListGroup.Item>品牌網站</ListGroup.Item>
                     <ListGroup.Item>公司情報</ListGroup.Item>
                     <ListGroup.Item>徵人情報</ListGroup.Item>
@@ -108,39 +110,29 @@ export default function MyFooter() {
                 </Col>
               </Row>
             </Col>
-            <Col md={3} className="mb-4">
+            <Col md={3} className="box">
               <ListGroup variant="flush" className="d-flex flex-column">
-                <ListGroup.Item className="fw-bold mb-1">
+                <ListGroup.Item className="fw-bold mb-4">
                   Social Media
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <div className="d-flex social-icon fs-5 gap-4 pb-3">
-                    <a className="mt-2" href="">
+                  <div className="d-flex social-icon fs-5 gap-4">
+                    <a className="" href="">
                       <FaFacebook />
                     </a>
-                    <a className="mt-2" href="">
+                    <a className="" href="">
                       <FaTwitter />
                     </a>
-                    <a className="mt-2" href="">
+                    <a className="" href="">
                       <FaInstagram />
                     </a>
-                    <a className="mt-2" href="">
+                    <a className="" href="">
                       <FaYoutube />
                     </a>
-                    <a className="mt-2" href="">
+                    <a className="" href="">
                       <FaLine />
                     </a>
                   </div>
-                </ListGroup.Item>
-              </ListGroup>
-              <ListGroup variant="flush" className="d-flex flex-column">
-                <ListGroup.Item className="fw-bold mb-3">
-                  最新活動
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <a href="" className="text-decoration-none">
-                    活動頁面
-                  </a>
                 </ListGroup.Item>
               </ListGroup>
             </Col>

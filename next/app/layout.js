@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '@/app/_styles/globals.scss'
+
 // 導入
 import Navbar from './_components/navbar'
 import Footer from './_components/footer'

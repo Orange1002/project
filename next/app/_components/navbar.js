@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation'
 import { Navbar, Nav, Container, Button, Form } from 'react-bootstrap'
 import { BiSearch } from 'react-icons/bi'
+import Link from 'next/link'
 
 export default function MyNavbar() {
   const pathname = usePathname()
@@ -17,9 +18,11 @@ export default function MyNavbar() {
       className="border-bottom shadow-sm custom-navbar-padding"
     >
       <Container fluid>
-        <Navbar.Brand href="#">
-          <div className="logo-text">BARK &amp; BIJOU</div>
-          <div className="logo-slogan">LUXURY &amp; LOVE FOR YOUR PUP</div>
+        <Navbar.Brand>
+          <Link href="/" className="text-decoration-none text-dark">
+            <div className="logo-text">BARK &amp; BIJOU</div>
+            <div className="logo-slogan">LUXURY &amp; LOVE FOR YOUR PUP</div>
+          </Link>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbarMain" />
@@ -27,14 +30,25 @@ export default function MyNavbar() {
           id="navbarMain"
           className="justify-content-end d-none d-lg-flex gap-4 align-items-center"
         >
-          <Nav className="gap-3 text-uppercase">
-            <Nav.Link href="#">首頁</Nav.Link>
-            <Nav.Link href="#">最新消息</Nav.Link>
-            <Nav.Link href="#">商品</Nav.Link>
-            <Nav.Link href="#">文章</Nav.Link>
-            <Nav.Link href="#">寵物保母</Nav.Link>
-            <Nav.Link href="#">優惠卷</Nav.Link>
-            <Nav.Link href="#">關於我們</Nav.Link>
+          <Nav className="gap-27 text-uppercase">
+            <Link href="/" passHref legacyBehavior>
+              <Nav.Link>首頁</Nav.Link>
+            </Link>
+            <Link href="/product" passHref legacyBehavior>
+              <Nav.Link>商品</Nav.Link>
+            </Link>
+            <Link href="/article" passHref legacyBehavior>
+              <Nav.Link>文章</Nav.Link>
+            </Link>
+            <Link href="/sitter" passHref legacyBehavior>
+              <Nav.Link>寵物保母</Nav.Link>
+            </Link>
+            <Link href="/coupon" passHref legacyBehavior>
+              <Nav.Link>優惠卷</Nav.Link>
+            </Link>
+            <Link href="#" passHref legacyBehavior>
+              <Nav.Link>關於我們</Nav.Link>
+            </Link>
           </Nav>
 
           <Button
@@ -51,13 +65,21 @@ export default function MyNavbar() {
               type="submit"
               onClick={(e) => setTimeout(() => e.currentTarget.blur(), 100)}
             >
-              <BiSearch style={{ color: '#ff7e79' }} />
+              <BiSearch style={{ color: '#cc543a' }} />
             </Button>
           </Form>
 
           <div className="d-flex align-items-center gap-4">
-            <a href="#" className="text-dark d-flex align-items-center"><i className="bi bi-person nav-icon" /></a>
-            <a href="#" className="text-dark d-flex align-items-center"><i className="bi bi-cart nav-icon" /></a>
+            <Link href="/member" passHref legacyBehavior>
+              <div className="text-dark d-flex align-items-center">
+                <i className="bi bi-person nav-icon" />
+              </div>
+            </Link>
+            <Link href="/shopcart" passHref legacyBehavior>
+              <div className="text-dark d-flex align-items-center">
+                <i className="bi bi-cart nav-icon" />
+              </div>
+            </Link>
           </div>
         </Navbar.Collapse>
       </Container>
