@@ -34,7 +34,7 @@ export default function DogCard({ dog, onDelete }) {
         <div className="d-flex justify-content-between mt-3">
           <button
             className="btn btn-primary"
-            onClick={() => router.push(`/dogs/edit/${dog.id}`)}
+            onClick={() => router.push(`/member/profile/dogs/edit/${dog.id}`)}
           >
             編輯
           </button>
