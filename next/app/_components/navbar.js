@@ -31,7 +31,7 @@ export default function MyNavbar() {
             <Nav.Link href="#">首頁</Nav.Link>
             <Nav.Link href="#">最新消息</Nav.Link>
             <Nav.Link href="#">商品</Nav.Link>
-            <Nav.Link href="#">文章</Nav.Link>
+            <Nav.Link href="/article">文章</Nav.Link>
             <Nav.Link href="#">寵物保母</Nav.Link>
             <Nav.Link href="#">優惠卷</Nav.Link>
             <Nav.Link href="#">關於我們</Nav.Link>

@@ -4,9 +4,8 @@ import useHeaderPhoto from '../_components/headerPhoto.js'
 import Breadcrumb from '../_components/breadCrumb.js'
 import Articlelist from '../_components/aricleList.js'
 
-
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import '../_style/article.scss'
 
 import { Pagination } from 'react-bootstrap'
@@ -65,11 +64,8 @@ function ArticleHeaderPhoto() {
           <div className="col-2">
             <Articlelist />
           </div>
-          <div className="col-10">
-         
-          </div>
+          <div className="col-10"></div>
         </div>
- 
       </div>
     </>
   )

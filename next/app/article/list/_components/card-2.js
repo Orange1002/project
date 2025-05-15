@@ -1,6 +1,7 @@
-import React from 'react';
-import '../_style/list.scss';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React from 'react'
+import '../_style/list.scss'
+import { AiOutlineRightCircle } from 'react-icons/ai'
+import { FaRegHeart } from 'react-icons/fa'
 
 const Card2 = () => {
   return (
@@ -16,11 +17,11 @@ const Card2 = () => {
         <div className="col-md-7">
           <div className="card-body pt-4">
             <div className="d-flex align-items-center mt-2">
-              <button
-                className="btn read-more rounded-circle d-flex justify-content-center align-items-center"
-              >
-                <i className="fa-solid fa-chevron-right fw-fa"></i>
-              </button>
+              <a href="#" className="icon-link">
+                <a href="你的連結網址" className="icon-link">
+                  <AiOutlineRightCircle className="icon" />
+                </a>
+              </a>
               <h5 className="card-title title-1 ms-2 mt-2">
                 從散步開始，享受毛孩的健康與美好時光！
               </h5>
@@ -34,9 +35,11 @@ const Card2 = () => {
               </p>
             </div>
             <div className="d-flex justify-content-between mt-4">
-              <div><p>2025/05/06 22:16</p></div>
+              <div>
+                <p>2025/05/06 22:16</p>
+              </div>
               <div className="d-flex align-items-center">
-                <i className="fa-regular fa-heart fa-fw card-icon card-i-hover"></i>
+                <FaRegHeart className="card-icon card-i-hover" />
                 <span className="ms-1">123</span>
               </div>
             </div>
@@ -44,7 +47,7 @@ const Card2 = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card2;
+export default Card2

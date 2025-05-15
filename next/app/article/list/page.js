@@ -8,8 +8,8 @@ import ButtonGroup from './_components/buttonGroup.js'
 import FloatingActionButton from './_components/floatingActionButton.js'
 import ChangePage from './_components/changePage.js'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import '../_style/article.scss'
 import './_style/list.scss'
 import { Pagination } from 'react-bootstrap'

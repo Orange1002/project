@@ -1,24 +1,27 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-// import '@fortawesome/fontawesome-free/css/all.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import { AiOutlineRightCircle } from 'react-icons/ai'
+import Image from 'next/image'
 
 const ArticleCardLarge = () => {
   return (
     <div className="card card-1 mt-4 d-none d-xl-block">
       <div className="row g-0">
         <div className="col-md-5">
-          <img
+          <Image
+            width={100}
+            height={100}
             src="/article_img/image-11.jpeg"
-            className="img-fluid float-start"
+            className="h-100 w-100 img-fluid float-start"
             alt="散步與毛孩"
           />
         </div>
         <div className="col-md-7">
           <div className="card-body pt-4">
             <div className="d-flex align-items-center mt-2">
-              <button className="btn btn-link read-more rounded-circle d-flex justify-content-center align-items-center">
-                <i className="fa-solid fa-chevron-right fw-fa"></i>
-              </button>
+              <a href="" className="icon-link">
+                <AiOutlineRightCircle className="icon" />
+              </a>
               <h5 className="card-title title-1 ms-2 mt-2">
                 從散步開始，享受毛孩的健康與美好時光！
               </h5>

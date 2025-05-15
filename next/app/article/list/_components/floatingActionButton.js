@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../_style/list.scss'
-import '@fortawesome/fontawesome-free/css/all.min.css'
+import { FaPaw } from 'react-icons/fa'
 
 const FloatingActionButton = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,15 +13,23 @@ const FloatingActionButton = () => {
     <div className="fab-container position-fixed bottom-0 end-0 p-4 floating-button">
       {/* 發文按鈕 */}
       {isOpen && (
-        <button className="btn mb-2 fab-option show" id="postBtn">
-          <i className="fa-solid fa-paw fa-fw mt-1"></i> 我要發文
+        <button
+          className="btn mb-2 fab-option show d-flex align-items-center"
+          id="postBtn"
+        >
+          <FaPaw className="me-1" />
+          <span>我要發文</span>
         </button>
       )}
 
       {/* 修改文章按鈕 */}
       {isOpen && (
-        <button className="btn mb-2 fab-option show" id="editBtn">
-          <i className="fa-solid fa-paw fa-fw mt-1"></i> 修改文章
+        <button
+          className="btn mb-2 fab-option show d-flex align-items-center"
+          id="editBtn"
+        >
+          <FaPaw className="me-1" />
+          <span>修改文章</span>
         </button>
       )}
 
@@ -32,9 +40,9 @@ const FloatingActionButton = () => {
         style={{ width: '160px', height: '40px' }}
         onClick={toggleMenu}
       >
-        <div className="d-flex justify-content-center gap-1">
-          <i className="fa-solid fa-paw fa-fw mt-1"></i>
-          <p>{isOpen ? '關閉' : '編輯文章'}</p>
+        <div className="d-flex justify-content-center align-items-center gap-1">
+          <FaPaw className=" me-1" />
+          <p className="">{isOpen ? '關閉' : '編輯文章'}</p>
         </div>
       </button>
     </div>

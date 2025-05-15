@@ -1,8 +1,8 @@
-import React from 'react';
-import '../_style/list.scss';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React from 'react'
+import '../_style/list.scss'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
-const ChangePage  = () => {
+const ChangePage = () => {
   return (
     <div className="d-flex justify-content-center mt-5">
       <nav aria-label="Page navigation">
@@ -18,13 +18,19 @@ const ChangePage  = () => {
             </a>
           </li>
           <li className="page-item">
-            <a className="page-link" href="#">1</a>
+            <a className="page-link" href="#">
+              1
+            </a>
           </li>
           <li className="page-item">
-            <a className="page-link" href="#">2</a>
+            <a className="page-link" href="#">
+              2
+            </a>
           </li>
           <li className="page-item">
-            <a className="page-link" href="#">3</a>
+            <a className="page-link" href="#">
+              3
+            </a>
           </li>
           <li className="page-item">
             <a className="page-link" href="#">
@@ -39,7 +45,7 @@ const ChangePage  = () => {
         </ul>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default ChangePage;
+export default ChangePage

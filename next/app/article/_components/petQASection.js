@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React from 'react'
+import { AiOutlineRightCircle } from 'react-icons/ai'
 const PetQASection = () => {
   return (
     <div className="row mt-5">
@@ -8,7 +8,9 @@ const PetQASection = () => {
         <div className="d-flex me-4">
           <p className="more">Details</p>
           <button className="btn btn-link read-more rounded-circle d-flex justify-content-center align-items-center mt-1 ms-3">
-            <i className="fa-solid fa-chevron-right fw-fa"></i>
+            <a href="你的連結網址" className="icon-link">
+              <AiOutlineRightCircle className="icon" />
+            </a>
           </button>
         </div>
       </div>
@@ -35,7 +37,7 @@ const PetQASection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PetQASection;
+export default PetQASection

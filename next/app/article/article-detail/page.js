@@ -1,7 +1,17 @@
 import React from 'react'
 import './_style/detail.scss'
-import '@fortawesome/fontawesome-free/css/all.min.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { AiOutlineRight } from 'react-icons/ai'
+
+// React Icons
+import {
+  FaAngleRight,
+  FaRegHeart,
+  FaInstagram,
+  FaYoutube,
+  FaLine,
+} from 'react-icons/fa'
+
 const ArticlePage = () => {
   return (
     <main>
@@ -9,20 +19,20 @@ const ArticlePage = () => {
         <a href="#" className="mb-0 me-3 text-decoration-none">
           首頁
         </a>
-        <i className="fa-solid fa-angle-right fa-fw"></i>
-        <a href="#" className="mb-0 me-3 ms-3 text-decoration-none">
+        <AiOutlineRight className="me-3" />
+        <a href="#" className="mb-0 me-3 text-decoration-none">
           文章
         </a>
-        <i className="fa-solid fa-angle-right fa-fw"></i>
-        <a href="#" className="mb-0 me-3 ms-3 text-decoration-none">
+        <AiOutlineRight className="me-3" />
+        <a href="#" className="mb-0 me-3 text-decoration-none">
           文章列表
         </a>
-        <i className="fa-solid fa-angle-right fa-fw"></i>
-        <a href="#" className="mb-0 me-3 ms-3 text-decoration-none">
+        <AiOutlineRight className="me-3" />
+        <a href="#" className="mb-0 me-3 text-decoration-none">
           營養與飲食
         </a>
-        <i className="fa-solid fa-angle-right fa-fw"></i>
-        <a href="#" className="mb-0 me-3 ms-3 text-decoration-none">
+        <AiOutlineRight className="me-3" />
+        <a href="#" className="mb-0 me-3 text-decoration-none">
           冬季維持狗狗活力的中獸醫食療配方
         </a>
       </div>
@@ -61,7 +71,7 @@ const ArticlePage = () => {
                   </p>
                   <p className="card-text">
                     現任 興沛動物醫院
-                    主治獸醫師，擁有2486年寵物食療臨床經驗寵物鮮食品牌【年年】共同創辦人
+                    主治獸醫師，擁有2486年寵物食療臨床經驗，寵物鮮食品牌【年年】共同創辦人
                   </p>
                 </div>
               </div>
@@ -78,16 +88,16 @@ const ArticlePage = () => {
             <div className="col-12 d-flex justify-content-between align-items-center border-bottom pb-2">
               <p className="mt-3">2025/05/08 11:39</p>
               <div className="d-flex align-items-center py-1">
-                <i className="fa-regular fa-heart share-heart me-5"></i>
+                <FaRegHeart className="share-heart me-5" />
                 <p className="mb-1 me-2">分享--</p>
                 <a className="me-2" href="#">
-                  <i className="fa-brands fa-instagram"></i>
+                  <FaInstagram />
                 </a>
                 <a className="me-2" href="#">
-                  <i className="fa-brands fa-youtube"></i>
+                  <FaYoutube />
                 </a>
                 <a href="#">
-                  <i className="fa-brands fa-line"></i>
+                  <FaLine />
                 </a>
               </div>
             </div>
@@ -104,10 +114,14 @@ const ArticlePage = () => {
               <div className="card mb-2 p-1">
                 <div className="card-body">
                   <strong>使用者A：</strong>
-                  <p className="mt-2 mb-2">我家的狗狗冬天真的比較沒精神，謝謝分享！</p>
+                  <p className="mt-2 mb-2">
+                    我家的狗狗冬天真的比較沒精神，謝謝分享！
+                  </p>
                   <div className="reply-box">
                     <strong>使用者B：</strong>
-                    <p className="mt-2 mb-2">我家也是，準備給牠吃溫補食物看看。</p>
+                    <p className="mt-2 mb-2">
+                      我家也是，準備給牠吃溫補食物看看。
+                    </p>
                   </div>
                   <form className="mt-2 reply-box">
                     <div className="mb-2">

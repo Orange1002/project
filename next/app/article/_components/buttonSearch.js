@@ -1,6 +1,6 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css'; // 如果使用 Bootstrap Icons
+import React from 'react'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const ArticleHeaderActions = () => {
   return (
@@ -33,7 +33,7 @@ const ArticleHeaderActions = () => {
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default ArticleHeaderActions;
+export default ArticleHeaderActions

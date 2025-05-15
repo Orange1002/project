@@ -5,8 +5,8 @@ import Breadcrumb from '../_components/breadCrumb.js'
 import Articlelist from '../_components/aricleList.js'
 import EventCard from './_components/eventCard.js'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import '../_style/article.scss'
 
 import { Pagination } from 'react-bootstrap'
@@ -67,12 +67,17 @@ function ArticleHeaderPhoto() {
           </div>
           <div className="col-10">
             <div className="event-list">
-              <EventCard imageSrc="../article_img/AIRBUGGY1 1.png" title="春季_狗狗新裝上線!!" />
-              <EventCard imageSrc="../article_img/example.png" title="另一個活動標題" />
+              <EventCard
+                imageSrc="../article_img/AIRBUGGY1 1.png"
+                title="春季_狗狗新裝上線!!"
+              />
+              <EventCard
+                imageSrc="../article_img/example.png"
+                title="另一個活動標題"
+              />
             </div>
           </div>
         </div>
-
       </div>
     </>
   )

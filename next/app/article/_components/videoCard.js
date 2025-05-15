@@ -1,8 +1,9 @@
-import React from 'react';
-
+import React from 'react'
+import { AiOutlineRightCircle } from 'react-icons/ai'
 const VideoCard = () => {
-  const videoUrl = "https://www.youtube.com/embed/DY-UslXiLKI?si=bTNtx1IZdls1JwD7"; // 可替換為動態 URL
-  const title = "6個方法，徹底防衛致命的寄生蟲 | 狗主人必看必懂的一集！"; // 可替換為動態標題
+  const videoUrl =
+    'https://www.youtube.com/embed/DY-UslXiLKI?si=bTNtx1IZdls1JwD7' // 可替換為動態 URL
+  const title = '6個方法，徹底防衛致命的寄生蟲 | 狗主人必看必懂的一集！' // 可替換為動態標題
 
   return (
     <div>
@@ -11,7 +12,9 @@ const VideoCard = () => {
         <div className="d-flex me-5">
           <p className="more">More</p>
           <button className="btn btn-link read-more rounded-circle d-flex justify-content-center align-items-center mt-1 ms-3">
-            <i className="fa-solid fa-chevron-right fw-fa"></i>
+            <a href="你的連結網址" className="icon-link">
+              <AiOutlineRightCircle className="icon" />
+            </a>
           </button>
         </div>
       </div>
@@ -42,7 +45,7 @@ const VideoCard = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default VideoCard;
+export default VideoCard
