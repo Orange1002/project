@@ -1,9 +1,5 @@
 @use '../../node_modules/bootstrap-icons/font/bootstrap-icons' as *;
-// 引入 Font Awesome SCSS 版本
-// @use '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome' as fa;
-// @use '../../node_modules/@fortawesome/fontawesome-free/scss/solid' as fa-solid;
-// @use '../../node_modules/@fortawesome/fontawesome-free/scss/brands' as fa-brands;
-// @use '../../node_modules/@fortawesome/fontawesome-free/scss/svg-with-js' as fa-svg;
+
 @use './nav' as nav;
 @use './base' as base;
 @use './area1.scss' as area1;
@@ -11,7 +7,7 @@
 @use './area3.scss' as area3;
 @use './area4.scss' as area4;
 @use './area5.scss' as area5;
-@use './area7.scss' as area7;
+// @use './area7.scss' as area7;
 @use './area8.scss' as area8;
 @use './footer' as footer;
 @import 'https://fonts.googleapis.com/css2?family=ABeeZee&display=swap';
