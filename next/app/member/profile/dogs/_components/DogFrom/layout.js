@@ -96,7 +96,7 @@ export default function DogForm({ initialData = {}, onSubmit }) {
       </div>
 
       <div className="mb-3">
-        <label className="form-label">介紹</label>
+        <label className="form-label">備註</label>
         <textarea
           className="form-control"
           name="description"

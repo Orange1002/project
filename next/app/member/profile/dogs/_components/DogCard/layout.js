@@ -20,10 +20,18 @@ export default function DogCard({ dog, onDelete }) {
       </div>
 
       <div className="card-body">
-        <h5 className="card-title">{dog.name}</h5>
-        <p className="card-text">{dog.description}</p>
+        <h5 className="card-title">{dog.name || '（未命名）'}</h5>
+        <p className="card-text mb-1">
+          <strong>年齡：</strong> {dog.age || '未填寫'}
+        </p>
+        <p className="card-text mb-1">
+          <strong>品種：</strong> {dog.breed || '未填寫'}
+        </p>
+        <p className="card-text">
+          <strong>備註：</strong> {dog.description || '未填寫'}
+        </p>
 
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between mt-3">
           <button
             className="btn btn-primary"
             onClick={() => router.push(`/dogs/edit/${dog.id}`)}
