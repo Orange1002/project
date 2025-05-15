@@ -1,4 +1,4 @@
-// hooks/useHeaderPhoto.js
+
 import { useState, useEffect } from 'react';
 
 function useHeaderPhoto(totalImages, delay = 3000) {

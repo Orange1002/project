@@ -4,7 +4,7 @@ export default function ArticleSidebar() {
   return (
     <div className="col-2 d-none d-xl-block">
       <div className="list-group">
-        <div className="article-list d-flex justify-content-center">
+        <div className="article-list d-flex justify-content-center pt-4">
           <p>Article List</p>
           <div className="al-circle"></div>
         </div>

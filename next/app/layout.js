@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '@/app/_styles/globals.scss'
 // 導入
 import Navbar from './_components/navbar'
-import Footer from './_components/footer'
+// import Footer from './_components/footer'
 
 export const metadata = {
   title: 'Bark & Bijou',
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <div style={{ height: '100%' }}>{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )
