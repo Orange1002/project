@@ -7,6 +7,7 @@ import Card2 from './_components/card-2.js'
 import ButtonGroup from './_components/buttonGroup.js'
 import FloatingActionButton from './_components/floatingActionButton.js'
 import ChangePage from './_components/changePage.js'
+import Image from 'next/image.js'
 
 // import 'bootstrap/dist/css/bootstrap.min.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,7 +28,9 @@ function ArticleHeaderPhoto() {
       <div className="container-fluid desktop">
         <div className="headerphoto d-none d-sm-block">
           {images.map((src, index) => (
-            <img
+            <Image
+              width={200}
+              height={200}
               key={index}
               src={src}
               alt={`header-img-${index + 1}`}

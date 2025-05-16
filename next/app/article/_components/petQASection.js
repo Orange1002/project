@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { AiOutlineRightCircle } from 'react-icons/ai'
 const PetQASection = () => {
   return (
@@ -19,7 +20,9 @@ const PetQASection = () => {
         <div className="card border-none service mt-5">
           <div className="row g-0">
             <div className="col-md-4">
-              <img
+              <Image
+                width={200}
+                height={200}
                 src="./article_img/channels4_profile.jpg"
                 className="img-fluid rounded-circle"
                 alt="客服專員 Roger"

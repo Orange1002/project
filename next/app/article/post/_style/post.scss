@@ -1,0 +1,21 @@
+.replay-btn {
+  background-color: #ed784a;
+  border: none;
+  width: 100px;
+  height: 35px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: white;
+
+  &:hover {
+    background-color: #d7633d;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    color: white;
+  }
+}
+.post-art h2 {
+  font-size: 1.5rem; // 你想要的大小
+  font-weight: 700;
+}

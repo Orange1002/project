@@ -1,6 +1,5 @@
 import React from 'react'
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap-icons/font/bootstrap-icons.css';
+import { AiOutlineSearch } from 'react-icons/ai'
 
 const ArticleHeaderActions = () => {
   return (
@@ -28,7 +27,7 @@ const ArticleHeaderActions = () => {
             className="btn position-absolute top-50 end-0 translate-middle-y me-3 p-0 border-0 bg-transparent"
             type="submit"
           >
-            <i className="bi bi-search"></i>
+            <AiOutlineSearch size={20} style={{ marginTop: '-2px' }} />
           </button>
         </div>
       </form>

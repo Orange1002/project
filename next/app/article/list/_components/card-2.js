@@ -2,25 +2,25 @@ import React from 'react'
 import '../_style/list.scss'
 import { AiOutlineRightCircle } from 'react-icons/ai'
 import { FaRegHeart } from 'react-icons/fa'
-
+import Image from 'next/image'
 const Card2 = () => {
   return (
     <div className="card card-2 mt-4 d-none d-xl-block">
       <div className="row g-0">
         <div className="col-md-5">
-          <img
+          <Image
+            width={426}
+            height={250}
             src="../article_img/image-11.jpeg"
             className="img-fluid float-start"
-            alt="..."
+            alt="毛孩散步圖片"
           />
         </div>
         <div className="col-md-7">
           <div className="card-body pt-4">
             <div className="d-flex align-items-center mt-2">
-              <a href="#" className="icon-link">
-                <a href="你的連結網址" className="icon-link">
-                  <AiOutlineRightCircle className="icon" />
-                </a>
+              <a href="你的連結網址" className="icon-link">
+                <AiOutlineRightCircle className="icon" />
               </a>
               <h5 className="card-title title-1 ms-2 mt-2">
                 從散步開始，享受毛孩的健康與美好時光！

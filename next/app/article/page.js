@@ -10,9 +10,11 @@ import CardSlider from './_components/eventSlider.js'
 import EventCarousel from './_components/eventCarousel.js'
 import VideoCard from './_components/videoCard.js'
 import PetQA from './_components/petQASection.js'
+import Image from 'next/image.js'
+import { AiOutlineRightCircle } from 'react-icons/ai'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './_style/article.scss'
 
 const images = [
@@ -28,7 +30,9 @@ function ArticleHeaderPhoto() {
       <div className="container-fluid desktop">
         <div className="headerphoto d-none d-sm-block">
           {images.map((src, index) => (
-            <img
+            <Image
+              width={200}
+              height={200}
               key={index}
               src={src}
               alt={`header-img-${index + 1}`}
@@ -87,9 +91,9 @@ function ArticleHeaderPhoto() {
           <div className="col-12 category d-flex justify-content-start mt-5">
             <p className="ms-3">文章列表</p>
             <div className="d-flex me-4">
-              <button className="btn btn-link read-more rounded-circle d-flex justify-content-center align-items-center mt-1 ms-3">
-                <i className="fa-solid fa-chevron-right fw-fa"></i>
-              </button>
+              <a href="你的連結網址" className="icon-link">
+                <AiOutlineRightCircle className="icon" />
+              </a>
             </div>
           </div>
           <div className="col-6 mt-5">
@@ -122,15 +126,17 @@ function ArticleHeaderPhoto() {
           </div>
           <div className="col-12 d-flex justify-content-center mt-5">
             <div className="card card-s h-100">
-              <img
+              <Image
+                width={200}
+                height={200}
                 src="./article_img/8297dee2d3f3e92a18cca6191d35938d.jpg"
                 className="card-img-top object-fit-cover"
                 alt="..."
               />
               <div className="card-body d-flex align-items-center p-4">
-                <button className="btn btn-link read-more rounded-circle d-flex justify-content-center align-items-center">
-                  <i className="fa-solid fa-chevron-right fw-fa"></i>
-                </button>
+                <a href="你的連結網址" className="icon-link">
+                  <AiOutlineRightCircle className="icon" />
+                </a>
                 <p className="card-text card-s-p ps-3">
                   從手作料理開始，兼顧毛孩的健康與美味！
                 </p>
@@ -148,22 +154,24 @@ function ArticleHeaderPhoto() {
           <div className="col-12 category d-flex justify-content-start mt-5">
             <p className="ms-3">熱門文章</p>
             <div className="d-flex me-4">
-              <button className="btn btn-link read-more rounded-circle d-flex justify-content-center align-items-center mt-1 ms-3">
-                <i className="fa-solid fa-chevron-right fw-fa"></i>
-              </button>
+              <a href="你的連結網址" className="icon-link">
+                <AiOutlineRightCircle className="icon" />
+              </a>
             </div>
           </div>
           <div className="col-12 d-flex justify-content-center mt-5 mb-5">
             <div className="card card-s h-100">
-              <img
+              <Image
+                width={200}
+                height={200}
                 src="./article_img/8297dee2d3f3e92a18cca6191d35938d.jpg"
                 className="card-img-top object-fit-cover"
                 alt="..."
               />
               <div className="card-body d-flex align-items-center p-4">
-                <button className="btn btn-link read-more rounded-circle d-flex justify-content-center align-items-center">
-                  <i className="fa-solid fa-chevron-right fw-fa"></i>
-                </button>
+                <a href="你的連結網址" className="icon-link">
+                  <AiOutlineRightCircle className="icon" />
+                </a>
                 <p className="card-text card-s-p ps-3">
                   從手作料理開始，兼顧毛孩的健康與美味！
                 </p>
@@ -176,29 +184,45 @@ function ArticleHeaderPhoto() {
           <div className="col-12 category d-flex justify-content-start mt-5">
             <p className="ms-3">最新活動</p>
             <div className="d-flex me-4">
-              <button className="btn btn-link read-more rounded-circle d-flex justify-content-center align-items-center mt-1 ms-3">
-                <i className="fa-solid fa-chevron-right fw-fa"></i>
-              </button>
+              <a href="你的連結網址" className="icon-link">
+                <AiOutlineRightCircle className="icon" />
+              </a>
             </div>
           </div>
           <div className="col-12">
-            <div className="event-card-group d-flex align-items-center flex-nowrap">
-              <a className="event-card">
-                <img src="./article_img/AIRBUGGY1 1.png" />
-                <div className="event-card-content">春季_狗狗新裝上線!!</div>
+            <div className="event-card-group d-flex align-items-center justify-content-center flex-nowrap">
+              <a className="event-card position-relative">
+                <Image
+                  width={480}
+                  height={211}
+                  src="/article_img/AIRBUGGY1 1.png"
+                  alt="春季_狗狗新裝上線!!"
+                  className="object-fit-cover rounded"
+                />
+                <div className="event-card-content position-absolute bottom-0 w-100 text-center bg-white bg-opacity-75">
+                  春季_狗狗新裝上線!!
+                </div>
               </a>
-              <a className="event-card">
-                <img src="./article_img/AIRBUGGY1 3.png" />
-                <div className="event-card-content">達指定金額 運費$0元！</div>
-              </a>
+              {/* <a className="event-card position-relative">
+                <Image
+                  width={480}
+                  height={211}
+                  src="/article_img/AIRBUGGY1 3.png"
+                  alt="達指定金額 運費$0元！"
+                  className="object-fit-cover rounded"
+                />
+                <div className="event-card-content position-absolute bottom-0 w-100 text-center bg-white bg-opacity-75">
+                  達指定金額 運費$0元！
+                </div>
+              </a> */}
             </div>
           </div>
           <div className="col-12 category d-flex justify-content-start mt-5">
             <p className="ms-3">推薦影片</p>
             <div className="d-flex me-4">
-              <button className="btn btn-link read-more rounded-circle d-flex justify-content-center align-items-center mt-1 ms-3">
-                <i className="fa-solid fa-chevron-right fw-fa"></i>
-              </button>
+              <a href="你的連結網址" className="icon-link">
+                <AiOutlineRightCircle className="icon" />
+              </a>
             </div>
           </div>
           <div className="col-12 mt-5">
@@ -233,9 +257,9 @@ function ArticleHeaderPhoto() {
           <div className="col-12 category d-flex justify-content-start mt-5">
             <p className="ms-3">寵物問答</p>
             <div className="d-flex me-4">
-              <button className="btn btn-link read-more rounded-circle d-flex justify-content-center align-items-center mt-1 ms-3">
-                <i className="fa-solid fa-chevron-right fw-fa"></i>
-              </button>
+              <a href="你的連結網址" className="icon-link">
+                <AiOutlineRightCircle className="icon" />
+              </a>
             </div>
           </div>
           <div className="col-12 mt-5">
@@ -243,7 +267,9 @@ function ArticleHeaderPhoto() {
               <div className="card mb-5 border-none service">
                 <div className="row g-0">
                   <div className="col-md-4 d-flex justify-content-center align-items-center">
-                    <img
+                    <Image
+                      width={200}
+                      height={200}
                       src="./article_img/channels4_profile.jpg"
                       className="img-fluid rounded-circle"
                       alt="客服專員 Roger"
