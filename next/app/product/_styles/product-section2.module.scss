@@ -57,7 +57,7 @@
 }
 
 /* 📱 手機版 */
-@media (max-width: 440px) {
+@media (max-width: 500px) {
   .productList {
     padding: 10px 20px 20px 20px;
     gap: 40px;
@@ -90,7 +90,7 @@
 }
 
 // 📱 手機版樣式
-@media (max-width: 440px) {
+@media (max-width: 500px) {
   .section2 {
     flex-direction: column;
     width: 100%;

@@ -8,13 +8,13 @@
     gap: 45px;
     flex-shrink: 0;
 
-    @media (max-width: 440px) {
+    @media (max-width: 500px) {
       gap: 0px;
       padding: 0px;
     }
   }
 
-  @media (max-width: 440px) {
+  @media (max-width: 500px) {
     .categoryWrapper {
       display: none;
     }

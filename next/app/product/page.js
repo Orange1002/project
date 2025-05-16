@@ -2,9 +2,9 @@
 
 import Image from 'next/image'
 
-import Pagination from "./_components/pagination/Pagination.jsx"
-import ProductCard from "./_components/card/ProductCard.jsx"
-import CategorySlider from "./_components/categorySlider/CategorySlider.jsx"
+import Pagination from './_components/pagination/Pagination.jsx'
+import ProductCard from './_components/card/ProductCard.jsx'
+import CategorySlider from './_components/categorySlider/CategorySlider.jsx'
 import SidebarFilter from './_components/sidebarFilter/SidebarFilter.jsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -12,15 +12,20 @@ import styles from './_styles/Page.module.scss'
 import section1Styles from './_styles/product-section1.module.scss'
 import section2Styles from './_styles/product-section2.module.scss'
 
-
-
-
 export default function ProductPage() {
   return (
     <>
       <div className={styles.productPage}>
         <div className={section1Styles.productBanner}>
-          <img src="/product-img/productBanner.png" alt="banner" />
+          <Image
+            src="/product-img/productBanner.png"
+            alt="banner"
+            width={1440}
+            height={400}
+            style={{ width: '100%', height: 'auto' }}
+            sizes="(max-width: 440px) 100vw, 100vw"
+            priority // 如果這是頁面最上方的 banner 建議加上
+          />
         </div>
         <main className={styles.main}>
           {/* 第一部分 */}
@@ -30,7 +35,9 @@ export default function ProductPage() {
               <div className={section1Styles.categoryTitle}>
                 <div className={section1Styles.categoryTitleContainer}>
                   <span className={section1Styles.line}></span>
-                  <div className={section1Styles.categoryTitleText}>free stitch Food</div>
+                  <div className={section1Styles.categoryTitleText}>
+                    free stitch Food
+                  </div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="15"
@@ -44,9 +51,14 @@ export default function ProductPage() {
               </div>
 
               {/* 麵包屑 */}
-              <nav className={section1Styles.breadcrumbNav} aria-label="breadcrumb">
+              <nav
+                className={section1Styles.breadcrumbNav}
+                aria-label="breadcrumb"
+              >
                 <ol>
-                  <li><a href="#">HOME</a></li>
+                  <li>
+                    <a href="#">HOME</a>
+                  </li>
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +75,9 @@ export default function ProductPage() {
                       />
                     </svg>
                   </li>
-                  <li><a href="#">Products</a></li>
+                  <li>
+                    <a href="#">Products</a>
+                  </li>
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +94,9 @@ export default function ProductPage() {
                       />
                     </svg>
                   </li>
-                  <li><a href="#">Food | Dry Dog Food</a></li>
+                  <li>
+                    <a href="#">Food | Dry Dog Food</a>
+                  </li>
                 </ol>
               </nav>
             </div>
@@ -109,10 +125,17 @@ export default function ProductPage() {
 
             <div className={section2Styles.productList}>
               <div className={section2Styles.listFilter}>
-                <div className={section2Styles.listFilterText}>1-24 items |</div>
+                <div className={section2Styles.listFilterText}>
+                  1-24 items |
+                </div>
 
-                <select className={section2Styles.mobileCategorySelect} defaultValue="">
-                  <option value="" disabled>篩選</option>
+                <select
+                  className={section2Styles.mobileCategorySelect}
+                  defaultValue=""
+                >
+                  <option value="" disabled>
+                    篩選
+                  </option>
                   <option value="food">Food</option>
                   <option value="can">Can</option>
                   <option value="snack">Snack</option>
@@ -124,7 +147,10 @@ export default function ProductPage() {
                   <option value="accessory">Accessory</option>
                 </select>
 
-                <select className={section2Styles.customSelect} defaultValue="latest">
+                <select
+                  className={section2Styles.customSelect}
+                  defaultValue="latest"
+                >
                   <option value="latest">最新上架</option>
                   <option value="popular">人氣排序</option>
                   <option value="price_low">價格低到高</option>
@@ -141,7 +167,8 @@ export default function ProductPage() {
                 <ProductCard
                   image="./product-img/product4.png"
                   name="好食·金屬寵器台｜冷冽黑 & 云白 M"
-                  price="NT$3,500" />
+                  price="NT$3,500"
+                />
                 <ProductCard
                   image="./product-img/product1.png"
                   name="好食·金屬寵器台｜冷冽黑 & 云白 M"
@@ -160,7 +187,8 @@ export default function ProductPage() {
                 <ProductCard
                   image="./product-img/product4.png"
                   name="好食·金屬寵器台｜冷冽黑 & 云白 M"
-                  price="NT$3,500" />
+                  price="NT$3,500"
+                />
                 <ProductCard
                   image="./product-img/product1.png"
                   name="好食·金屬寵器台｜冷冽黑 & 云白 M"
@@ -179,7 +207,8 @@ export default function ProductPage() {
                 <ProductCard
                   image="./product-img/product4.png"
                   name="好食·金屬寵器台｜冷冽黑 & 云白 M"
-                  price="NT$3,500" />
+                  price="NT$3,500"
+                />
                 <ProductCard
                   image="./product-img/product1.png"
                   name="好食·金屬寵器台｜冷冽黑 & 云白 M"
