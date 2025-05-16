@@ -1,38 +1,49 @@
 footer {
-    /* margin-top: 150px; */
-    background-color: #505050;
-    height: 400px;
+  /* margin-top: 150px; */
+  background-color: #505050;
+  height: 400px;
 
-    ul {
-        color: #D9D9D9;
-        font-size: 14px;
-
-        a {
-            color: #D9D9D9;
-        }
+  .list-group {
+    color: #d9d9d9;
+    font-size: 14px;
+    a {
+      color: #d9d9d9;
     }
+  }
 
-    h5 {
-        font-size: 14px;
-        color: #D9D9D9;
-    }
+  .list-group-item {
+    border: none !important; /* 可選，移除邊框線 */
+    color: #d9d9d9 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 16px !important;
+  }
+
+  h5 {
+    font-size: 14px;
+    color: #d9d9d9;
+  }
+
+  .box {
+    height: 158px;
+  }
 }
 
 @media (max-width: 1199.98px) {
-    #footer-desktop {
-        display: none;
-    }
+  #footer-desktop {
+    display: none;
+  }
 
-    #footer-mobile {
-        display: block;
-    }
+  #footer-mobile {
+    display: block;
+  }
 
-    #desktop {
-        display: none;
-    }
+  #desktop {
+    display: none;
+  }
 
-    #mobile {
-        display: block;
-        margin-top: 150px;
-    }
+  #mobile {
+    display: block;
+    margin-top: 150px;
+  }
 }
