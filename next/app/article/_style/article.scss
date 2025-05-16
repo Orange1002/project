@@ -71,14 +71,12 @@
   width: 180px;
   height: 80px;
   font-size: 16px;
-
-  span {
-    color: #cc543a;
-    font-size: 30px;
-    padding-bottom: 10px;
-  }
 }
-
+.list-group-item2 span {
+  color: #cc543a;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
 .c-s-btn {
   background-color: #ed784a;
   border: none;
@@ -259,6 +257,7 @@
   width: 160px;
   font-weight: 300;
   line-height: 24px;
+  font-size: 14px;
 }
 
 .card-s:hover button {
@@ -418,6 +417,7 @@
   color: #505050;
   margin-left: 25px;
   padding-right: 10px;
+  font-size: 32px;
 }
 
 .bg-gray {

@@ -2,15 +2,10 @@ import React from 'react'
 import './_style/detail.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { AiOutlineRight } from 'react-icons/ai'
+import Image from 'next/image'
 
 // React Icons
-import {
-  FaAngleRight,
-  FaRegHeart,
-  FaInstagram,
-  FaYoutube,
-  FaLine,
-} from 'react-icons/fa'
+import { FaRegHeart, FaInstagram, FaYoutube, FaLine } from 'react-icons/fa'
 
 const ArticlePage = () => {
   return (
@@ -39,7 +34,12 @@ const ArticlePage = () => {
 
       <div className="container">
         <div className="d-flex justify-content-center article-p">
-          <img src="../article_img/181944.png" alt="" />
+          <Image
+            width={780}
+            height={405}
+            src="../article_img/181944.png"
+            alt=""
+          />
         </div>
 
         <div className="row">
@@ -55,7 +55,9 @@ const ArticlePage = () => {
           <div className="card mb-3 custom-card">
             <div className="row g-0">
               <div className="col-md-4">
-                <img
+                <Image
+                  width={215}
+                  height={203}
                   src="../article_img/171758376764_o.jpg"
                   className="img-fluid rounded-start object-fit-cover custom-card-photo"
                   alt="..."

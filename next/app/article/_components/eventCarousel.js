@@ -1,5 +1,6 @@
 import React, { useRef, useCallback } from 'react'
 import { AiOutlineRightCircle, AiOutlineLeftCircle } from 'react-icons/ai'
+import Image from 'next/image'
 
 const EventCarousel = () => {
   const scrollRef = useRef(null)
@@ -90,7 +91,12 @@ const EventCarousel = () => {
         >
           {events.map((event, index) => (
             <a className="event-card" key={index}>
-              <img src={event.img} alt={`活動${index + 1}`} />
+              <Image
+                width={200}
+                height={200}
+                src={event.img}
+                alt={`活動${index + 1}`}
+              />
               <div className="event-card-content">{event.text}</div>
             </a>
           ))}

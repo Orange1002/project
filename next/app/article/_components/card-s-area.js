@@ -1,6 +1,6 @@
 // components/CardArea.jsx
-import React from 'react';
-import SmallArticleCard from './card-s.js';
+import React from 'react'
+import SmallArticleCard from './card-s.js'
 
 const cardData = [
   {
@@ -24,7 +24,7 @@ const cardData = [
     likeCount: 88,
   },
   // 你可以再多加幾筆
-];
+]
 
 const CardArea = () => {
   return (
@@ -38,7 +38,7 @@ const CardArea = () => {
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default CardArea;
+export default CardArea

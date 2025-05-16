@@ -3,12 +3,14 @@
 import useHeaderPhoto from '../_components/headerPhoto.js'
 import Breadcrumb from '../_components/breadCrumb.js'
 import Articlelist from '../_components/aricleList.js'
-
+import PostArticle from './_components/postArticle.js'
+import Image from 'next/image.js'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import '../_style/article.scss'
+import '../post/_style/post.scss'
 
-import { Pagination } from 'react-bootstrap'
+// import { Pagination } from 'react-bootstrap'
 
 const images = [
   '/article_img/d1e21f1a-4730-472b-8531-51b3c7b7890a.jpg',
@@ -23,7 +25,9 @@ function ArticleHeaderPhoto() {
       <div className="container-fluid desktop">
         <div className="headerphoto d-none d-sm-block">
           {images.map((src, index) => (
-            <img
+            <Image
+              width={100}
+              height={100}
               key={index}
               src={src}
               alt={`header-img-${index + 1}`}
@@ -32,7 +36,7 @@ function ArticleHeaderPhoto() {
           ))}
         </div>
       </div>
-      <div className="container desktop">
+      <div className="container desktop mb-5">
         <div className="row">
           <div className="col-6">
             <Breadcrumb />
@@ -64,7 +68,9 @@ function ArticleHeaderPhoto() {
           <div className="col-2">
             <Articlelist />
           </div>
-          <div className="col-10"></div>
+          <div className="col-10">
+            <PostArticle />
+          </div>
         </div>
       </div>
     </>

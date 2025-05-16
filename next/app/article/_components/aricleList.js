@@ -1,5 +1,4 @@
 import React from 'react'
-// import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 export default function ArticleSidebar() {
   return (
@@ -10,9 +9,9 @@ export default function ArticleSidebar() {
           <div className="al-circle"></div>
         </div>
 
-        {/* 區塊重複部分可抽成元件（省略此步） */}
+        {/* 文章列表 */}
         <a
-          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white"
+          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white text-decoration-none"
           data-bs-toggle="collapse"
           href="#subCatch1"
         >
@@ -21,32 +20,33 @@ export default function ArticleSidebar() {
         <div className="collapse" id="subCatch1">
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             飲食與營養
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             行為與訓練
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             健康與保健
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 last-item"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 last-item text-decoration-none"
           >
             戶外活動與探險
           </a>
         </div>
 
+        {/* 熱門文章 */}
         <a
-          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white"
+          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white text-decoration-none"
           data-bs-toggle="collapse"
           href="#subCatch2"
         >
@@ -55,32 +55,33 @@ export default function ArticleSidebar() {
         <div className="collapse" id="subCatch2">
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             飲食與營養
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             行為與訓練
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             健康與保健
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 last-item pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 last-item pt-4 text-decoration-none"
           >
             戶外活動與探險
           </a>
         </div>
 
+        {/* 最新活動 */}
         <a
-          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white"
+          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white text-decoration-none"
           data-bs-toggle="collapse"
           href="#subCatch3"
         >
@@ -89,20 +90,21 @@ export default function ArticleSidebar() {
         <div className="collapse" id="subCatch3">
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             活動預告
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             熱烈進行中
           </a>
         </div>
 
+        {/* 推薦知識影音 */}
         <a
-          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white"
+          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white text-decoration-none"
           data-bs-toggle="collapse"
           href="#subCatch4"
         >
@@ -111,20 +113,21 @@ export default function ArticleSidebar() {
         <div className="collapse" id="subCatch4">
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             營養體重與健康
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             行為與訓練
           </a>
         </div>
 
+        {/* 收藏文章 */}
         <a
-          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white"
+          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white text-decoration-none"
           data-bs-toggle="collapse"
           href="#subCatch5"
         >
@@ -133,38 +136,39 @@ export default function ArticleSidebar() {
         <div className="collapse" id="subCatch5">
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             我的文章
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             飲食與營養
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             行為與訓練
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             健康與保健
           </a>
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 last-item pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 last-item pt-4 text-decoration-none"
           >
             戶外活動與探險
           </a>
         </div>
 
+        {/* 寵物問答 */}
         <a
-          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white"
+          className="list-group-item2 list-group-item-action d-flex justify-content-between align-items-center p-4 bg-white text-decoration-none"
           data-bs-toggle="collapse"
           href="#subCatch6"
         >
@@ -173,7 +177,7 @@ export default function ArticleSidebar() {
         <div className="collapse" id="subCatch6">
           <a
             href="#"
-            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4"
+            className="list-group-item2 list-group-item-action border-bottom p-3 pt-4 text-decoration-none"
           >
             我要詢問
           </a>

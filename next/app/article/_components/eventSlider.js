@@ -4,6 +4,7 @@ import {
   AiOutlineRightCircle,
   AiOutlineHeart,
 } from 'react-icons/ai'
+import Image from 'next/image'
 
 const EventSlider = () => {
   const [cardMove, setCardMove] = useState(0)
@@ -45,9 +46,11 @@ const EventSlider = () => {
       <div
         className="card card-h"
         key={index}
-        style={{ position: 'relative', width: '220px' }}
+        style={{ position: 'relative', width: '230px' }}
       >
-        <img
+        <Image
+          width={200}
+          height={200}
           src={card.img}
           className="card-img-top object-fit-cover"
           alt="文章圖片"
@@ -98,7 +101,7 @@ const EventSlider = () => {
     <div className="row">
       <div className="category d-flex justify-content-between align-items-center mb-3">
         <div className="event-title d-flex align-items-center">熱門文章</div>
-        <div className="d-flex align-items-center me-4">
+        <div className="d-flex align-items-center me-4 mb-5">
           <p className="more mb-0 me-2">More</p>
           <a href="" className="icon-link">
             <AiOutlineRightCircle className="icon" />
