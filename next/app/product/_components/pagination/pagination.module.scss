@@ -32,3 +32,11 @@
 .pageArrow {
   cursor: pointer;
 }
+
+@media (max-width: 440px) {
+  .pagination {
+    ul {
+      padding: 20px 0 30px 0;
+    }
+  }
+}
