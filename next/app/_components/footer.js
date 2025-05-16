@@ -141,10 +141,10 @@ export default function MyFooter() {
       </footer>
 
       {/* Mobile Footer */}
-      <footer id="footer-mobile" className="d-block d-xl-none w-100 h-100 pt-5">
+      <footer id="footer-mobile" className="d-block d-lg-none w-100 h-100 py-5">
         <Container>
           <Row>
-            <Col sm={6} className="d-flex justify-content-center">
+            <Col xs={6} className="d-flex justify-content-center">
               <ListGroup variant="flush">
                 <ListGroup.Item className="fw-bold mt-3">
                   Online Store
@@ -213,7 +213,7 @@ export default function MyFooter() {
                 </ListGroup.Item>
               </ListGroup>
             </Col>
-            <Col sm={6}>
+            <Col xs={6}>
               <ListGroup
                 variant="flush"
                 className="d-flex justify-content-center"
@@ -223,26 +223,30 @@ export default function MyFooter() {
                 <ListGroup.Item>公司情報</ListGroup.Item>
                 <ListGroup.Item>徵人情報</ListGroup.Item>
                 <ListGroup.Item>聯絡我們</ListGroup.Item>
-                <ListGroup.Item className="fw-bold mb-1 mt-4">
+                <ListGroup.Item className="fw-bold mb-1 mt-30">
                   Social Media
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <div className="d-flex social-icon fs-5 gap-3 pb-3">
-                    <a className="mt-1" href="">
-                      <FaFacebook />
-                    </a>
-                    <a className="mt-1" href="">
-                      <FaTwitter />
-                    </a>
-                    <a className="mt-1" href="">
-                      <FaInstagram />
-                    </a>
-                    <a className="mt-1" href="">
-                      <FaYoutube />
-                    </a>
-                    <a className="mt-1" href="">
-                      <FaLine />
-                    </a>
+                  <div className="d-lg-flex social-icon fs-5 gap-3 pb-3">
+                    <div className="mb-2">
+                      <a className="me-3" href="">
+                        <FaFacebook />
+                      </a>
+                      <a className="me-3" href="">
+                        <FaTwitter />
+                      </a>
+                      <a className="me-3" href="">
+                        <FaInstagram />
+                      </a>
+                    </div>
+                    <div>
+                      <a className="me-3" href="">
+                        <FaYoutube />
+                      </a>
+                      <a className="me-3" href="">
+                        <FaLine />
+                      </a>
+                    </div>
                   </div>
                 </ListGroup.Item>
               </ListGroup>

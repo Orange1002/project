@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { FaChevronCircleLeft } from 'react-icons/fa'
@@ -34,7 +36,7 @@ export default function MyEvent() {
   const position = useRef(0)
   const contentToShow = 3
   const moveSpeed = 500
-  let distanceBetweenContent = 0
+  const distanceBetweenContent = useRef(0)
 
   useEffect(() => {
     if (window.innerWidth > 575.98) {
@@ -47,7 +49,7 @@ export default function MyEvent() {
       const contentWidth = 478.8
       allCards.forEach((el) => (el.style.width = `${contentWidth}px`))
 
-      distanceBetweenContent =
+      distanceBetweenContent.current =
         allCards[1].offsetLeft - allCards[0].offsetLeft || contentWidth + 30
 
       // 複製卡片實現無限輪播
@@ -62,7 +64,7 @@ export default function MyEvent() {
 
       position.current = contentToShow
       eventCardGroup.style.transform = `translateX(${
-        -distanceBetweenContent * contentToShow
+        -distanceBetweenContent.current * contentToShow
       }px)`
 
       const onTransitionEnd = () => {
@@ -71,13 +73,13 @@ export default function MyEvent() {
           position.current = allCards.length
           eventCardGroup.style.transition = 'none'
           eventCardGroup.style.transform = `translateX(${
-            -distanceBetweenContent * position.current
+            -distanceBetweenContent.current * position.current
           }px)`
         } else if (position.current >= allCards.length + contentToShow) {
           position.current = contentToShow
           eventCardGroup.style.transition = 'none'
           eventCardGroup.style.transform = `translateX(${
-            -distanceBetweenContent * position.current
+            -distanceBetweenContent.current * position.current
           }px)`
         }
       }
@@ -91,7 +93,7 @@ export default function MyEvent() {
         position.current += step
         eventCardGroup.style.transition = `transform ${moveSpeed}ms`
         eventCardGroup.style.transform = `translateX(${
-          -distanceBetweenContent * position.current
+          -distanceBetweenContent.current * position.current
         }px)`
       }
 
@@ -137,7 +139,9 @@ export default function MyEvent() {
     <>
       <section>
         <div className="event-wrapper bg-gray py-96">
-          <div className="event-title d-flex align-items-center">最新消息</div>
+          <div className="event-title d-flex align-items-center mb-5 mb-lb-0">
+            最新消息
+          </div>
           <div className="event-body d-flex justify-content-center align-items-center">
             <div
               className="event-arrow d-flex justify-content-center align-items-center"

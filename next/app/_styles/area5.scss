@@ -165,6 +165,11 @@
     gap: 15px;
     flex: 1 0 0;
     align-self: stretch;
+    font-size: 24px;
+
+    svg:hover {
+      cursor: pointer;
+    }
   }
 }
 

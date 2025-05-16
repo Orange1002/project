@@ -79,6 +79,7 @@
   overflow: hidden;
 
   @media (max-width: 575.98px) {
+    height: 270px;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;

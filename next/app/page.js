@@ -2,8 +2,11 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import Event from './_components/event.js'
+import Link from 'next/link.js'
+import MyEvent from './_components/event.js'
 import MyProductCard from './_components/product-card.js'
+import MyCarousel from './_components/carousel.js'
+import MyArticleCard from './_components/article-card.js'
 
 const slides = [
   { src: '/images/hero-dog-1.jpg', alt: 'Dog 1' },
@@ -38,6 +41,8 @@ export default function AppPage() {
 
   // 第二部分
   const scrollRef = useRef(null)
+  const [atStart, setAtStart] = useState(true)
+  const [atEnd, setAtEnd] = useState(false)
 
   const scroll = (offset) => {
     if (scrollRef.current) {
@@ -47,6 +52,28 @@ export default function AppPage() {
       })
     }
   }
+
+  const updateArrowVisibility = () => {
+    if (scrollRef.current) {
+      const el = scrollRef.current
+      setAtStart(el.scrollLeft === 0)
+      setAtEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 1)
+    }
+  }
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+
+    updateArrowVisibility()
+    el.addEventListener('scroll', updateArrowVisibility)
+    window.addEventListener('resize', updateArrowVisibility)
+
+    return () => {
+      el.removeEventListener('scroll', updateArrowVisibility)
+      window.removeEventListener('resize', updateArrowVisibility)
+    }
+  }, [])
 
   return (
     <>
@@ -116,6 +143,11 @@ export default function AppPage() {
               className="category-arrow left-arrow"
               aria-label="Scroll left"
               onClick={() => scroll(-150)}
+              style={{
+                opacity: atStart ? 0 : 1,
+                pointerEvents: atStart ? 'none' : 'auto',
+                transition: 'opacity 0.3s',
+              }}
             >
               <i className="bi bi-chevron-left"></i>
             </button>
@@ -126,8 +158,8 @@ export default function AppPage() {
               ref={scrollRef}
             >
               {categories.map((item, index) => (
-                <div className="category-item text-center" key={index}>
-                  <Image src={item.src} alt={item.alt} />
+                <div className="category-item text-center me-3" key={index}>
+                  <Image src={item.src} alt={item.alt} width={50} height={50} />
                   <div className="text-uppercase small mt-2">{item.label}</div>
                 </div>
               ))}
@@ -138,6 +170,11 @@ export default function AppPage() {
               className="category-arrow right-arrow"
               aria-label="Scroll right"
               onClick={() => scroll(150)}
+              style={{
+                opacity: atEnd ? 0 : 1,
+                pointerEvents: atEnd ? 'none' : 'auto',
+                transition: 'opacity 0.3s',
+              }}
             >
               <i className="bi bi-chevron-right"></i>
             </button>
@@ -146,14 +183,14 @@ export default function AppPage() {
       </section>
 
       {/* 第三區塊 */}
-      <Event />
+      <MyEvent />
 
       {/* 第四區塊 */}
       <section>
         <Container>
           <Row className="my-96">
             <Col xs={12} lg={6} className="p-3">
-              <a href="#">
+              <Link href="#">
                 <div className="position-relative transform-size1">
                   <div className="position-relative">
                     <Image
@@ -166,11 +203,11 @@ export default function AppPage() {
                   </div>
                   <div className="label position-absolute">FOOD</div>
                 </div>
-              </a>
+              </Link>
             </Col>
 
             <Col xs={12} lg={6} className="p-3">
-              <a href="#">
+              <Link href="#">
                 <div className="position-relative transform-size1">
                   <div className="position-relative">
                     <Image
@@ -187,11 +224,11 @@ export default function AppPage() {
                     DOOR
                   </div>
                 </div>
-              </a>
+              </Link>
             </Col>
 
             <Col xs={12} lg={4} className="p-3">
-              <a href="#">
+              <Link href="#">
                 <div className="position-relative transform-size1">
                   <div className="position-relative">
                     <Image
@@ -208,11 +245,11 @@ export default function AppPage() {
                     DOOR
                   </div>
                 </div>
-              </a>
+              </Link>
             </Col>
 
             <Col xs={12} lg={4} className="p-3">
-              <a href="#">
+              <Link href="#">
                 <div className="position-relative transform-size1">
                   <div className="position-relative">
                     <Image
@@ -225,11 +262,11 @@ export default function AppPage() {
                   </div>
                   <div className="label position-absolute">HOTEL</div>
                 </div>
-              </a>
+              </Link>
             </Col>
 
             <Col xs={12} lg={4} className="p-3">
-              <a href="#">
+              <Link href="#">
                 <div className="position-relative transform-size1">
                   <div className="position-relative">
                     <Image
@@ -242,7 +279,7 @@ export default function AppPage() {
                   </div>
                   <div className="label position-absolute">HEALTH</div>
                 </div>
-              </a>
+              </Link>
             </Col>
           </Row>
         </Container>
@@ -250,6 +287,12 @@ export default function AppPage() {
 
       {/* 第五區塊 */}
       <MyProductCard />
+
+      {/* 第六區塊 */}
+      <MyCarousel />
+
+      {/* 第七區塊 */}
+      <MyArticleCard />
 
       {/* 第八區塊 */}
       <section>
@@ -261,8 +304,13 @@ export default function AppPage() {
                   <div className="text-white text2-1 d-none d-lg-block">
                     BARK & BIJOU 官網購物線上購物指南
                   </div>
-                  <div className="text-white text2-1 d-block d-lg-none text-center">
-                    線上購物指南
+                  <div className="text-white text2-1  d-lg-none text-center">
+                    <div className="mb-3">線</div>
+                    <div className="mb-3">上</div>
+                    <div className="mb-3">購</div>
+                    <div className="mb-3">物</div>
+                    <div className="mb-3">指</div>
+                    <div className="mb-3">南</div>
                   </div>
                   <div className="text-white d-lg-flex d-none g-70">
                     <i className="bi bi-truck fs-80"></i>
@@ -278,7 +326,17 @@ export default function AppPage() {
               <a className="text-decoration-none" href="#">
                 <div className="box2-2 bg-gray">
                   <div className="d-flex d-lg-block align-items-center justify-content-center">
-                    <div className="mb-lg-14 text-orange text2-2">
+                    <div className="mb-lg-14 text-orange text2-2 d-block d-lg-none">
+                      <div className="mb-3 mt-2">線</div>
+                      <div className="mb-3">上</div>
+                      <div className="mb-3">購</div>
+                      <div className="mb-3">買</div>
+                      <div className="mb-3">門</div>
+                      <div className="mb-3">市</div>
+                      <div className="mb-3">自</div>
+                      <div className="mb-3">取</div>
+                    </div>
+                    <div className="mb-lg-14 text-orange text2-2 d-none d-lg-block">
                       線上購買 門市自取
                     </div>
                     <div className="text-orange2 text2-3 d-none d-lg-block">
@@ -318,7 +376,12 @@ export default function AppPage() {
                     大型物品配送說明
                   </div>
                   <div className="text-orange2 text2-5 d-block d-lg-none">
-                    大型物品配送
+                    <div className="mb-3">大</div>
+                    <div className="mb-3">型</div>
+                    <div className="mb-3">物</div>
+                    <div className="mb-3">品</div>
+                    <div className="mb-3">配</div>
+                    <div className="mb-3">送</div>
                   </div>
                   <div className="d-none d-lg-flex box2-7 position-relative">
                     <div className="box2-6 position-relative">

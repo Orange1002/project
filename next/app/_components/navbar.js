@@ -5,6 +5,15 @@ import { Navbar, Nav, Container, Button, Form } from 'react-bootstrap'
 import { BiSearch } from 'react-icons/bi'
 import Link from 'next/link'
 
+const navItems = [
+  { href: '/', label: '首頁' },
+  { href: '/product', label: '商品' },
+  { href: '/article', label: '文章' },
+  { href: '/sitter', label: '寵物保母' },
+  { href: '/coupon', label: '優惠卷' },
+  { href: '/about', label: '關於我們' },
+]
+
 export default function MyNavbar() {
   const pathname = usePathname()
 
@@ -32,22 +41,44 @@ export default function MyNavbar() {
         >
           <Nav className="gap-27 text-uppercase">
             <Link href="/" passHref legacyBehavior>
-              <Nav.Link>首頁</Nav.Link>
+              <Nav.Link className={pathname === '/' ? 'active' : ''}>
+                首頁
+              </Nav.Link>
             </Link>
             <Link href="/product" passHref legacyBehavior>
-              <Nav.Link>商品</Nav.Link>
+              <Nav.Link
+                className={pathname.startsWith('/product') ? 'active' : ''}
+              >
+                商品
+              </Nav.Link>
             </Link>
             <Link href="/article" passHref legacyBehavior>
-              <Nav.Link>文章</Nav.Link>
+              <Nav.Link
+                className={pathname.startsWith('/article') ? 'active' : ''}
+              >
+                文章
+              </Nav.Link>
             </Link>
             <Link href="/sitter" passHref legacyBehavior>
-              <Nav.Link>寵物保母</Nav.Link>
+              <Nav.Link
+                className={pathname.startsWith('/sitter') ? 'active' : ''}
+              >
+                寵物保母
+              </Nav.Link>
             </Link>
             <Link href="/coupon" passHref legacyBehavior>
-              <Nav.Link>優惠卷</Nav.Link>
+              <Nav.Link
+                className={pathname.startsWith('/coupon') ? 'active' : ''}
+              >
+                優惠卷
+              </Nav.Link>
             </Link>
-            <Link href="#" passHref legacyBehavior>
-              <Nav.Link>關於我們</Nav.Link>
+            <Link href="/about" passHref legacyBehavior>
+              <Nav.Link
+                className={pathname.startsWith('/about') ? 'active' : ''}
+              >
+                關於我們
+              </Nav.Link>
             </Link>
           </Nav>
 
@@ -71,14 +102,10 @@ export default function MyNavbar() {
 
           <div className="d-flex align-items-center gap-4">
             <Link href="/member" passHref legacyBehavior>
-              <div className="text-dark d-flex align-items-center">
-                <i className="bi bi-person nav-icon" />
-              </div>
+              <i className="bi bi-person nav-icon" />
             </Link>
             <Link href="/shopcart" passHref legacyBehavior>
-              <div className="text-dark d-flex align-items-center">
-                <i className="bi bi-cart nav-icon" />
-              </div>
+              <i className="bi bi-cart nav-icon" />
             </Link>
           </div>
         </Navbar.Collapse>
