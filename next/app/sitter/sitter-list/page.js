@@ -3,7 +3,18 @@
 import React, { useState, useEffect } from 'react'
 import {} from 'react-bootstrap'
 
+import SitterCard from '../_components/sitter-card'
+
 export default function SitterList(props) {
+  const [sitters, setSitters] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:3005/api/sitter') // 你的 API 路由
+      .then((res) => res.json())
+      .then((data) => setSitters(data))
+      .catch((err) => console.error(err))
+  }, [])
+
   return (
     <>
       <div className="container py-5">
@@ -46,272 +57,12 @@ export default function SitterList(props) {
         </div>
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
           {/* 卡片樣板（可重複） */}
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle" />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* 複製卡片 */}
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle" />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* 再複製兩張卡片 */}
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle">樟菇</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
-          {/* 卡片樣板（可重複） */}
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle" />
-                </div>
-              </div>
+          {sitters.map((sitter) => (
+            <div className="col" key={sitter.id}>
+              <SitterCard sitter={sitter} />
             </div>
-          </div>
-          {/* 複製卡片 */}
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle" />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* 再複製兩張卡片 */}
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle">樟菇</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
-          {/* 卡片樣板（可重複） */}
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle" />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* 複製卡片 */}
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle" />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* 再複製兩張卡片 */}
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card h-100 shadow">
-              <img
-                src="https://placehold.co/400x351"
-                className="card-img-top"
-                alt="保母圖片"
-              />
-              <div className="card-body card-body-bg">
-                <h5 className="card-title card-title-custom">保母姓名</h5>
-                <p className="card-text text-danger card-text-custom">
-                  介紹下面用評分
-                </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <a href="#" className="text-danger detail-link">
-                    詳細介紹
-                  </a>
-                  <div className="rounded-circle rating-circle">樟菇</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
         <nav
           aria-label="Page navigation"
